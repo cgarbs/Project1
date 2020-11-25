@@ -1,0 +1,159 @@
+#root {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Player Starting Positions */
+.grid81 {
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.grid82 {
+    background-color: blue;
+    border-radius: 50%;
+}
+
+
+.grid91 {
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.grid92 {
+    background-color: blue;
+    border-radius: 50%;
+}
+
+
+.grid9 {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.grid10 {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.grid19 {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.grid20 {
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+
+/* Board Positions */
+.grid73 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid63 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid53 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid43 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid33 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid23 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid24 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid25 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid26 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid27 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid28 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid38 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid48 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid58 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid68 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid78 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid77 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid76 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid75 {
+    background-color: beige;
+    border-radius: 50%;
+}
+.grid74 {
+    background-color: beige;
+    border-radius: 50%;
+}
+
+
+/* First Position Arrows */
+.firstBlue {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.blueArrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid blue;
+  }
+  .firstRed {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .redArrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid red;
+  }
