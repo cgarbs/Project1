@@ -47,12 +47,24 @@
     border-radius: 50%;
 }
 
-
+/* Board Positions */
 .position {
     background-color: beige;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-/* Board Positions */
+
+/* Blue Homes */
+.blueHomes {
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 
 
 

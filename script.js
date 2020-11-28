@@ -50,7 +50,7 @@ const blueHome2 = document.querySelector(".grid54");
 const blueHome3 = document.querySelector(".grid44");
 const blueHome4 = document.querySelector(".grid34");
 
-const positions = [position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11, position12, position13, position14, position15, position16, position17, position18, position19, position20]
+const positions = [position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, blueHome1, blueHome2, blueHome3, blueHome4]
 
 // Player 1 Corner
 const blueCorner1 = document.querySelector(".grid82");
@@ -70,12 +70,13 @@ const redCorner2 = document.querySelector(".grid9");
 const redCorner3 = document.querySelector(".grid20");
 const redCorner4 = document.querySelector(".grid10");
 
-
 const createPositions = () => {
     for (i in positions) {
+        if (i < 20) {
         positions[i].classList.add('position')
-        const positionDiv = document.createElement("div");
-        positions[i].appendChild(positionDiv);
+        } else {
+            positions[i].classList.add('blueHomes')
+        }
     }
 }
 
@@ -87,8 +88,20 @@ const player = document.createElement("button");
 player.style.width = "50px";
 player.style.height = "50px";
 player.style.backgroundColor = "lightBlue";
-positions.appendChild(player);
-console.log(positions)
+
+
+// Player 1 Movement
+blueCorner1.appendChild(player);
+
+let place = 0;
+
+player.onclick = function() {
+    console.log(player);
+    positions[place].appendChild(player);
+    place++;
+}
+
+
 
 
 
