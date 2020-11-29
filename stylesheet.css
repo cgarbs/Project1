@@ -65,11 +65,19 @@
     justify-content: space-evenly;
 }
 
+.blueCorners {
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 
 
 
 /* First Position Arrows */
-.firstBlue {
+/* .firstBlue {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -92,4 +100,4 @@
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-top: 50px solid red;
-  }
+  } */

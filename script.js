@@ -58,11 +58,20 @@ const blueCorner2 = document.querySelector(".grid92");
 const blueCorner3 = document.querySelector(".grid81");
 const blueCorner4 = document.querySelector(".grid91");
 
+const blueCorners = [blueCorner1, blueCorner2, blueCorner3, blueCorner4];
+const createBlueCorners = () => {
+    for (i in blueCorners) {
+        blueCorners[i].classList.add('blueCorners');
+    }
+}
+createBlueCorners();
+
 //Player 2 Home
 const redHome1 = document.querySelector(".grid37");
 const redHome2 = document.querySelector(".grid47");
 const redHome3 = document.querySelector(".grid57");
 const redHome4 = document.querySelector(".grid67");
+
 
 // Player 2 Corner
 const redCorner1 = document.querySelector(".grid19");
@@ -83,28 +92,85 @@ const createPositions = () => {
 createPositions();
 
 
-// Player 1 Piece
+// Player 1 Piece1
 const player = document.createElement("button");
 player.style.width = "50px";
 player.style.height = "50px";
 player.style.backgroundColor = "lightBlue";
 
-
-// Player 1 Movement
 blueCorner1.appendChild(player);
 
 let place = 0;
 
 player.onclick = function() {
-    console.log(player);
     positions[place].appendChild(player);
     place++;
+}
+
+// Player 1 Piece2
+const player2 = document.createElement("button");
+player2.style.width = "50px";
+player2.style.height = "50px";
+player2.style.backgroundColor = "lightBlue";
+
+blueCorner2.appendChild(player2);
+
+let place2 = 0;
+
+player2.onclick = function() {
+    positions[place2].appendChild(player2);
+    place2++;
+}
+
+// Player 1 Piece3
+const player3 = document.createElement("button");
+player3.style.width = "50px";
+player3.style.height = "50px";
+player3.style.backgroundColor = "lightBlue";
+
+blueCorner3.appendChild(player3);
+
+let place3 = 0;
+
+player3.onclick = function() {
+    positions[place3].appendChild(player3);
+    place3++;
+}
+
+// Player 1 Piece4
+const player4 = document.createElement("button");
+player4.style.width = "50px";
+player4.style.height = "50px";
+player4.style.backgroundColor = "lightBlue";
+
+blueCorner4.appendChild(player4);
+
+let place4 = 0;
+
+player4.onclick = function() {
+    positions[place4].appendChild(player4);
+    place4++;
 }
 
 
 
 
 
+
+
+// Die Roll
+
+const die = document.createElement("button");
+die.style.width = "100px";
+die.style.height = "100px";
+const diePlace = document.querySelector(".grid100");
+diePlace.appendChild(die);
+
+
+
+const rollDice = () => {
+    return 1 + Math.floor(Math.random()*6)
+  }
 
 //Arrows
 
