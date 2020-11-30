@@ -44,13 +44,25 @@ const position18 = document.querySelector(".grid76");
 const position19 = document.querySelector(".grid75");
 const position20 = document.querySelector(".grid74");
 
-//Player 1 Homes
 const blueHome1 = document.querySelector(".grid64");
 const blueHome2 = document.querySelector(".grid54");
 const blueHome3 = document.querySelector(".grid44");
 const blueHome4 = document.querySelector(".grid34");
 
 const positions = [position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, blueHome1, blueHome2, blueHome3, blueHome4]
+
+const createPositions = () => {
+    for (i in positions) {
+        if (i < 20) {
+        positions[i].classList.add('position')
+        } else {
+            positions[i].classList.add('blueHomes')
+        }
+    }
+}
+
+createPositions();
+
 
 // Player 1 Corner
 const blueCorner1 = document.querySelector(".grid82");
@@ -64,7 +76,9 @@ const createBlueCorners = () => {
         blueCorners[i].classList.add('blueCorners');
     }
 }
+
 createBlueCorners();
+
 
 //Player 2 Home
 const redHome1 = document.querySelector(".grid37");
@@ -78,18 +92,6 @@ const redCorner1 = document.querySelector(".grid19");
 const redCorner2 = document.querySelector(".grid9");
 const redCorner3 = document.querySelector(".grid20");
 const redCorner4 = document.querySelector(".grid10");
-
-const createPositions = () => {
-    for (i in positions) {
-        if (i < 20) {
-        positions[i].classList.add('position')
-        } else {
-            positions[i].classList.add('blueHomes')
-        }
-    }
-}
-
-createPositions();
 
 
 // Player 1 Piece1
@@ -163,6 +165,7 @@ player4.onclick = function() {
 const die = document.createElement("button");
 die.style.width = "100px";
 die.style.height = "100px";
+die.style.backgroundColor = "beige";
 const diePlace = document.querySelector(".grid100");
 diePlace.appendChild(die);
 
@@ -171,6 +174,8 @@ diePlace.appendChild(die);
 const rollDice = () => {
     return 1 + Math.floor(Math.random()*6)
   }
+
+  rollDice();
 
 //Arrows
 
