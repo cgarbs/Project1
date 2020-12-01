@@ -4,49 +4,6 @@
 }
 
 
-/* Player Starting Positions */
-.grid81 {
-    background-color: blue;
-    border-radius: 50%;
-}
-
-.grid82 {
-    background-color: blue;
-    border-radius: 50%;
-}
-
-
-.grid91 {
-    background-color: blue;
-    border-radius: 50%;
-}
-
-.grid92 {
-    background-color: blue;
-    border-radius: 50%;
-}
-
-
-.grid9 {
-    background-color: red;
-    border-radius: 50%;
-}
-
-.grid10 {
-    background-color: red;
-    border-radius: 50%;
-}
-
-.grid19 {
-    background-color: red;
-    border-radius: 50%;
-}
-
-.grid20 {
-    background-color: red;
-    border-radius: 50%;
-}
-
 /* Board Positions */
 .position {
     background-color: beige;
@@ -56,7 +13,7 @@
     justify-content: space-evenly;
 }
 
-/* Blue Homes */
+/* Blue Positions */
 .blueHomes {
     background-color: blue;
     border-radius: 50%;
@@ -73,6 +30,22 @@
     justify-content: space-evenly;
 }
 
+/* Red Positions */
+.redHomes {
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.redCorners {
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 
 

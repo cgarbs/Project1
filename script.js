@@ -3,6 +3,8 @@ console.log("connected");
 const root = document.querySelector("#root");
 root.style.width = "1100px";
 root.style.height = "1000px";
+let playerMove = 1;
+let diceRoll = null;
 
 
 // Grid
@@ -44,12 +46,22 @@ const position18 = document.querySelector(".grid76");
 const position19 = document.querySelector(".grid75");
 const position20 = document.querySelector(".grid74");
 
+
+//Player 1 Home
 const blueHome1 = document.querySelector(".grid64");
 const blueHome2 = document.querySelector(".grid54");
 const blueHome3 = document.querySelector(".grid44");
 const blueHome4 = document.querySelector(".grid34");
 
+
+//Player 2 Home
+const redHome1 = document.querySelector(".grid37");
+const redHome2 = document.querySelector(".grid47");
+const redHome3 = document.querySelector(".grid57");
+const redHome4 = document.querySelector(".grid67");
+
 const positions = [position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, blueHome1, blueHome2, blueHome3, blueHome4]
+const positions2 = [position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, redHome1, redHome2, redHome3, redHome4]
 
 const createPositions = () => {
     for (i in positions) {
@@ -62,6 +74,18 @@ const createPositions = () => {
 }
 
 createPositions();
+
+const createPositions2 = () => {
+    for (i in positions2) {
+        if (i < 20) {
+        positions2[i].classList.add('position')
+        } else {
+            positions2[i].classList.add('redHomes')
+        }
+    }
+}
+
+createPositions2();
 
 
 // Player 1 Corner
@@ -80,102 +104,25 @@ const createBlueCorners = () => {
 createBlueCorners();
 
 
-//Player 2 Home
-const redHome1 = document.querySelector(".grid37");
-const redHome2 = document.querySelector(".grid47");
-const redHome3 = document.querySelector(".grid57");
-const redHome4 = document.querySelector(".grid67");
-
-
 // Player 2 Corner
 const redCorner1 = document.querySelector(".grid19");
 const redCorner2 = document.querySelector(".grid9");
 const redCorner3 = document.querySelector(".grid20");
 const redCorner4 = document.querySelector(".grid10");
 
-
-// Player 1 Piece1
-const player = document.createElement("button");
-player.style.width = "50px";
-player.style.height = "50px";
-player.style.backgroundColor = "lightBlue";
-
-blueCorner1.appendChild(player);
-
-let place = 0;
-
-player.onclick = function() {
-    positions[place].appendChild(player);
-    place++;
+const redCorners = [redCorner1, redCorner2, redCorner3, redCorner4];
+const createRedCorners = () => {
+    for (i in redCorners) {
+        redCorners[i].classList.add('redCorners');
+    }
 }
 
-// Player 1 Piece2
-const player2 = document.createElement("button");
-player2.style.width = "50px";
-player2.style.height = "50px";
-player2.style.backgroundColor = "lightBlue";
-
-blueCorner2.appendChild(player2);
-
-let place2 = 0;
-
-player2.onclick = function() {
-    positions[place2].appendChild(player2);
-    place2++;
-}
-
-// Player 1 Piece3
-const player3 = document.createElement("button");
-player3.style.width = "50px";
-player3.style.height = "50px";
-player3.style.backgroundColor = "lightBlue";
-
-blueCorner3.appendChild(player3);
-
-let place3 = 0;
-
-player3.onclick = function() {
-    positions[place3].appendChild(player3);
-    place3++;
-}
-
-// Player 1 Piece4
-const player4 = document.createElement("button");
-player4.style.width = "50px";
-player4.style.height = "50px";
-player4.style.backgroundColor = "lightBlue";
-
-blueCorner4.appendChild(player4);
-
-let place4 = 0;
-
-player4.onclick = function() {
-    positions[place4].appendChild(player4);
-    place4++;
-}
+createRedCorners();
 
 
 
 
 
-
-
-// Die Roll
-
-const die = document.createElement("button");
-die.style.width = "100px";
-die.style.height = "100px";
-die.style.backgroundColor = "beige";
-const diePlace = document.querySelector(".grid100");
-diePlace.appendChild(die);
-
-
-
-const rollDice = () => {
-    return 1 + Math.floor(Math.random()*6)
-  }
-
-  rollDice();
 
 //Arrows
 
