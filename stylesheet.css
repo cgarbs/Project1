@@ -1,8 +1,19 @@
 #root {
     display: flex;
     flex-wrap: wrap;
+    
 }
 
+/* Experimentation */
+button:hover {
+    background-color: yellow;
+}
+
+/* Die Text */
+.die {
+    color: white;
+    font-size: 40px;
+}
 
 /* Board Positions */
 .position {
@@ -49,7 +60,7 @@
 
 
 
-/* First Position Arrows */
+/* Optional/Directional Arrows */
 /* .firstBlue {
     display: flex;
     align-items: center;

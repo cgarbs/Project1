@@ -1,8 +1,12 @@
 console.log("connected");
 
+// Root
 const root = document.querySelector("#root");
 root.style.width = "1100px";
 root.style.height = "1000px";
+
+
+// Necessary Variables
 let playerMove = 1;
 let diceRoll = null;
 
@@ -60,6 +64,8 @@ const redHome2 = document.querySelector(".grid47");
 const redHome3 = document.querySelector(".grid57");
 const redHome4 = document.querySelector(".grid67");
 
+
+// Position Arrays (P1 and P2)
 const positions = [position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, blueHome1, blueHome2, blueHome3, blueHome4]
 const positions2 = [position11, position12, position13, position14, position15, position16, position17, position18, position19, position20, position1, position2, position3, position4, position5, position6, position7, position8, position9, position10, redHome1, redHome2, redHome3, redHome4]
 
@@ -124,8 +130,7 @@ createRedCorners();
 
 
 
-//Arrows
-
+//Arrows (optional/directional)
 // const firstBlue = document.querySelector(".grid73");
 // firstBlue.classList.add('firstBlue');
 // const blueArrow = document.createElement("div")
