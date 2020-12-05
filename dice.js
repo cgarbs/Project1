@@ -6,6 +6,7 @@ die.style.backgroundColor = "blue";
 const diePlace = document.querySelector(".grid100");
 diePlace.appendChild(die);
 die.classList.add("die");
+die.innerHTML = ("Roll!");
 
 let rolled = 1;
 
@@ -16,18 +17,3 @@ die.onclick = function () {
   rolled = 2;
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-// who is the player on the move
-// roll the dice
-// show available plays - highlight pieces that can move to that roll
