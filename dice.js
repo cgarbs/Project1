@@ -14,6 +14,6 @@ die.onclick = function () {
   let result = 1 + Math.floor(Math.random() * 6);
   diceRoll = result;
   die.innerHTML = result;
+  console.log(result);
   rolled = 2;
-
 };
