@@ -5,7 +5,6 @@ const root = document.querySelector("#root");
 root.style.width = "1100px";
 root.style.height = "1000px";
 
-
 // Necessary Variables
 let playerMove = 1;
 let diceRoll = null;
@@ -18,7 +17,7 @@ for(i = 1; i <= 100; i++) {
     div.style.width = "100px";
     div.style.height = "100px";
     div.style.borderStyle = "solid";
-    div.style.borderColor = "grey";
+    div.style.borderColor = "black";
     div.classList.add(`grid${[i]}`);
     root.appendChild(div);
     }
@@ -126,19 +125,15 @@ const createRedCorners = () => {
 createRedCorners();
 
 
-
-
-
-
 //Arrows (optional/directional)
-// const firstBlue = document.querySelector(".grid73");
-// firstBlue.classList.add('firstBlue');
-// const blueArrow = document.createElement("div")
-// firstBlue.appendChild(blueArrow);
-// blueArrow.classList.add('blueArrow');
+const firstBlue = document.querySelector(".grid83");
+firstBlue.classList.add('firstBlue');
+const blueArrow = document.createElement("div")
+firstBlue.appendChild(blueArrow);
+blueArrow.classList.add('blueArrow');
 
-// const firstRed = document.querySelector(".grid28");
-// firstRed.classList.add('firstRed');
-// const redArrow = document.createElement("div")
-// firstRed.appendChild(redArrow);
-// redArrow.classList.add('redArrow');
+const firstRed = document.querySelector(".grid18");
+firstRed.classList.add('firstRed');
+const redArrow = document.createElement("div")
+firstRed.appendChild(redArrow);
+redArrow.classList.add('redArrow');

@@ -208,14 +208,24 @@ const playerCanEnter = () => {
 
 // Blue Collision Prevention
 const playerCanMove = (piecePlace) => {
-  const position = positions[piecePlace + diceRoll].children;
+  const webObject = positions[piecePlace + diceRoll].children;
+  const position = Array.from(webObject);
+  console.log(position);
   if (position.length === 0) {
     return true;
-  } else if (playerPieces.includes(position[0])) {
+  // } else if (playerPieces.includes(position[0])) {
+  } else if (position.includes(player) ||
+  position.includes(player2) ||
+  position.includes(player3) ||
+  position.includes(player4)) {
     return false;
   }
-  //   TODO enemy piece
 };
+
+
+// const playerHit = (piecePlace) => {
+
+// }
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -234,7 +244,7 @@ redPlayer.onclick = function() {
             if(diceRoll === 6 && redCorner1.contains(redPlayer) && redPlayerCanEnter()) {
                 positions2[0].appendChild(redPlayer);
                 rolled++;
-            }else if (positions2[redPlace].contains(redPlayer) && redPlace + diceRoll < 24 && redPlayerCanMove()) {
+            }else if (positions2[redPlace].contains(redPlayer) && redPlace + diceRoll < 24 && redPlayerCanMove(redPlace)) {
                 redPlace = redPlace + diceRoll;
                 positions2[redPlace].appendChild(redPlayer);
                 if(diceRoll !== 6) {
@@ -276,7 +286,7 @@ redPlayer2.onclick = function() {
             if(diceRoll === 6 && redCorner2.contains(redPlayer2) && redPlayerCanEnter()) {
                 positions2[0].appendChild(redPlayer2);
                 rolled++;
-            }else if (positions2[redPlace2].contains(redPlayer2) && redPlace2 + diceRoll < 24 && redPlayerCanMove()) {
+            }else if (positions2[redPlace2].contains(redPlayer2) && redPlace2 + diceRoll < 24 && redPlayerCanMove(redPlace2)) {
                 redPlace2 = redPlace2 + diceRoll;
                 positions2[redPlace2].appendChild(redPlayer2);
                 if(diceRoll !== 6) {
@@ -318,7 +328,7 @@ redPlayer3.onclick = function() {
             if(diceRoll === 6 && redCorner3.contains(redPlayer3) && redPlayerCanEnter()) {
                 positions2[0].appendChild(redPlayer3);
                 rolled++;
-            }else if (positions2[redPlace3].contains(redPlayer3) && redPlace3 + diceRoll < 24 && redPlayerCanMove()) {
+            }else if (positions2[redPlace3].contains(redPlayer3) && redPlace3 + diceRoll < 24 && redPlayerCanMove(redPlace3)) {
                 redPlace3 = redPlace3 + diceRoll;
                 positions2[redPlace3].appendChild(redPlayer3);
                 if(diceRoll !== 6) {
@@ -360,7 +370,7 @@ redPlayer4.onclick = function() {
             if(diceRoll === 6 && redCorner4.contains(redPlayer4) && redPlayerCanEnter()) {
                 positions2[0].appendChild(redPlayer4);
                 rolled++;
-            }else if (positions2[redPlace4].contains(redPlayer4) && redPlace4 + diceRoll < 24 && redPlayerCanMove()) {
+            }else if (positions2[redPlace4].contains(redPlayer4) && redPlace4 + diceRoll < 24 && redPlayerCanMove(redPlace4)) {
                 redPlace4 = redPlace4 + diceRoll;
                 positions2[redPlace4].appendChild(redPlayer4);
                 if(diceRoll !== 6) {
@@ -386,8 +396,9 @@ redPlayer4.onclick = function() {
     } else (alert("Roll the die first!"))
 }
 
+const redPlayerPieces = [redPlayer, redPlayer2, redPlayer3, redPlayer4]
 
-// Blue Entrance Collision Prevention
+// Red Entrance Collision Prevention
 const redPlayerCanEnter = () => {
     if(positions2[0].contains(redPlayer) ||
     positions2[0].contains(redPlayer2) ||
@@ -398,29 +409,18 @@ const redPlayerCanEnter = () => {
         return true;
     }
 }
-// Blue Collision Prevention
-const redPlayerCanMove = () => {
-    if(redPlace + diceRoll === redPlace2 ||
-        redPlace + diceRoll === redPlace3 ||
-        redPlace + diceRoll === redPlace4) {
-            return false;
-        }
-    if(redPlace2 + diceRoll === redPlace ||
-        redPlace2 + diceRoll === redPlace3 ||
-        redPlace2 + diceRoll === redPlace4) {
-            return false;
-        }
-    if(redPlace3 + diceRoll === redPlace ||
-        redPlace3 + diceRoll === redPlace2 ||
-        redPlace3 + diceRoll === redPlace4) {
-            return false;
-        }
-    if(redPlace4 + diceRoll === redPlace ||
-        redPlace4 + diceRoll === redPlace2 ||
-        redPlace4 + diceRoll === redPlace3) {
-            return false;
-        } 
-    else {
-        return true;
-    }
-}
+// Red Collision Prevention
+const redPlayerCanMove = (piecePlace) => {
+  const webObject2 = positions[piecePlace + diceRoll].children;
+  const position2 = Array.from(webObject2);
+  console.log(position2);
+  if (position2.length === 0) {
+    return true;
+  // } else if (playerPieces.includes(position[0])) {
+  } else if (position2.includes(redPlayer) ||
+  position2.includes(redPlayer2) ||
+  position2.includes(redPlayer3) ||
+  position2.includes(redPlayer4)) {
+    return false;
+  }
+};
