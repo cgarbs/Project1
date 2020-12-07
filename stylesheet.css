@@ -1,7 +1,19 @@
+body {
+    display: flex;
+}
+
 #root {
     display: flex;
     flex-wrap: wrap;
-    
+    margin-left: 250px;
+}
+#instructions {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 60px;
 }
 
 /* Die Text */
