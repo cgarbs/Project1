@@ -1,11 +1,5 @@
-// TODO:
-// Fix player entrance onto board AND limit entrance to diceRoll 6.
-// Prevent same color piece collision (including on entrance).
-// Knock opposing pieces back to starting corner upon landing on same position.
-// Create remaining pieces.
-// Close off player homes on arrival.
-// Implement parameters for victory.
-// Add Instructions, center gameboard, improve aesthetics.
+// NOTE: Player collision upon entry requires is bugged!
+
 
 // Player 1 Piece1
 const player = document.createElement("button");
@@ -54,7 +48,8 @@ player.onclick = function () {
   } else alert("Roll the die first!");
 };
 
-// // Player 1 Piece2
+
+//Player 1 Piece2
 const player2 = document.createElement("button");
 player2.classList.add("player");
 
@@ -101,7 +96,8 @@ player2.onclick = function () {
   } else alert("Roll the die first!");
 };
 
-// // Player 1 Piece3
+
+//Player 1 Piece3
 const player3 = document.createElement("button");
 player3.classList.add("player");
 
@@ -148,7 +144,8 @@ player3.onclick = function () {
   } else alert("Roll the die first!");
 };
 
-// // Player 1 Piece4
+
+//Player 1 Piece4
 const player4 = document.createElement("button");
 player4.classList.add("player");
 
@@ -243,7 +240,7 @@ redPlayer.onclick = function() {
 }
 
 
-// // Player 2 Piece2
+//Player 2 Piece2
 const redPlayer2 = document.createElement("button");
 redPlayer2.classList.add('redplayer')
 
@@ -287,7 +284,7 @@ redPlayer2.onclick = function() {
 }
 
 
-// // Player 2 Piece3
+//Player 2 Piece3
 const redPlayer3 = document.createElement("button");
 redPlayer3.classList.add('redplayer')
 
@@ -331,7 +328,7 @@ redPlayer3.onclick = function() {
 }
 
 
-// // Player 2 Piece4
+//Player 2 Piece4
 const redPlayer4 = document.createElement("button");
 redPlayer4.classList.add('redplayer')
 
@@ -377,6 +374,7 @@ redPlayer4.onclick = function() {
 
 // -------------------------------------------------------------------------------------------------------------------------
 
+
 const playerPieces = [player, player2, player3, player4];
 const redPlayerPieces = [redPlayer, redPlayer2, redPlayer3, redPlayer4]
 
@@ -409,6 +407,7 @@ const playerCanMove = (piecePlace) => {
   }
 };
 
+
 // Blue Collision into Red
 const playerHit = (piecePlace) => {
   const webObject = positions[piecePlace + diceRoll].children;
@@ -429,7 +428,6 @@ const playerHit = (piecePlace) => {
 }
 
 
-
 // Red Entrance Collision Prevention
 const redPlayerCanEnter = () => {
     if(positions2[0].contains(redPlayer) ||
@@ -441,6 +439,8 @@ const redPlayerCanEnter = () => {
         return true;
     }
 }
+
+
 // Red Collision Prevention
 const redPlayerCanMove = (piecePlace) => {
   const webObject2 = positions2[piecePlace + diceRoll].children;
@@ -454,6 +454,7 @@ const redPlayerCanMove = (piecePlace) => {
     return true;
   }
 };
+
 
 // Red Collision into Blue
 const redPlayerHit = (piecePlace) => {

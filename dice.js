@@ -33,6 +33,7 @@ const blueVictory = () => {
   }
 }
 
+
 // Red Victory
 const redVictory1 = redHome1.children;
 const redVictory2 = redHome2.children;
